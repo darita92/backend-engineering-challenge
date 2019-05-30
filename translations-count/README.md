@@ -1,7 +1,7 @@
 translations-count
 ==================
 
-Unbabel CLI to count amount of translations per minute
+Unbabel CLI to get average delivery time per minute for transactions
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/translations-count.svg)](https://npmjs.org/package/translations-count)
