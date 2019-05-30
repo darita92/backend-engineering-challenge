@@ -48,15 +48,19 @@ class TranslationsCount extends Command {
         let newDate = substractMinutes(currentDate, i)
         let formattedDate = formatWithoutMinutes(newDate)
 
-        let transactionCount = 0
+        let transactionAverage = 0
         Object.keys(groupedTransactions).forEach(transactionGroup => {
           if (transactionGroup === formattedDate) {
-            transactionCount = groupedTransactions[transactionGroup].length
+            let sum = 0
+            groupedTransactions[transactionGroup].forEach(transaction => {
+              sum = sum + transaction.duration
+            })
+            transactionAverage = sum / groupedTransactions[transactionGroup].length
           }
         })
         const value = JSON.stringify({
           date: formattedDate,
-          average_delivery_time: transactionCount
+          average_delivery_time: transactionAverage
         })
         appendFileSync(outputFile, value + '\n')
       }

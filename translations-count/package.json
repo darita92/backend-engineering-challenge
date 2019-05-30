@@ -1,6 +1,6 @@
 {
   "name": "translations-count",
-  "description": "Unbabel CLI to count amount of translations per minute",
+  "description": "Unbabel CLI to get average delivery time per minute for transactions",
   "version": "0.0.0",
   "author": "Daniel Arita @darita92",
   "bin": {
